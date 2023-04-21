@@ -1,14 +1,16 @@
 function configureListeners() {
-    let images = // select img elements  
+    var images = document.getElementsByTagName('img') // select img elements  
 
 
      for (var i = 0; i < images.length; i++) {        
-        // iterate over images and add mouseover event listeners      
+        // iterate over images and add mouseover event listeners 
+        document.getElementById(images[i].id).addEventListener('mouseover', addOpacity)     
     } 
 }
 
 function addOpacity(event) {
-    // add appropriate CSS class
+    document.getElementById(images[i].id).classList.add("dim")  // add appropriate CSS class
+    console.log('dimming')
     getProductInfo(event.target.id);     
 }
 
@@ -61,10 +63,10 @@ function getProductInfo(paintColor) {
 
     function updatePrice(colorName, price)
     {       
-        let colorPrice = // select element with corresponding id
+        //let colorPrice = // select element with corresponding id
         // display price
         
-        let color = // select element with corresponding id
+        // let color = // select element with corresponding id
         //display color name
     }
     
